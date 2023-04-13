@@ -5,7 +5,7 @@ Library    Collections
 *** Variables ***
 ${base_url}    https://api.publicapis.org
 
-*** Test Cases ***git sta
+*** Test Cases ***
 PutInfo
   create session  myssion  ${base_url}
   ${response}=    post request  myssion  /entries
