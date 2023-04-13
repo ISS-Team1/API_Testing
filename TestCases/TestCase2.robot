@@ -16,7 +16,5 @@ PutInfo
 
   #Validations
   Should Be Equal As Strings  ${response.status_code}  200
-
-  #Should Contain           ${response.status _code}    200
   ${res_body}=   convert to string    ${response.content}
   should contain  ${res_body}    Limited street parking is available on Caroline street. Residents have a dedicated car park at 1 caroline st on level B, visitors may park in the lower ground car park.

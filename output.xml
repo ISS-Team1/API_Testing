@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230413 11:43:14.261" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230413 11:51:50.706" rpa="false" schemaversion="3">
 <suite id="s1" name="TestCase2" source="C:\Users\ZF07GB\PycharmProjects\API_Testing\TestCases\TestCase2.robot">
 <test id="s1-t1" name="PutInfo" line="9">
 <kw name="Create Session" library="RequestsLibrary">
 <arg>myssion</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230413 11:43:14.373" level="INFO">Creating Session using : alias=myssion, url=http://127.0.0.1:5000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20230413 11:43:14.373" endtime="20230413 11:43:14.373"/>
+<msg timestamp="20230413 11:51:50.830" level="INFO">Creating Session using : alias=myssion, url=http://127.0.0.1:5000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230413 11:51:50.830" endtime="20230413 11:51:50.830"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${payload}</var>
 <arg>request=Where can I park?</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230413 11:43:14.373" level="INFO">${payload} = {'request': 'Where can I park?'}</msg>
-<status status="PASS" starttime="20230413 11:43:14.373" endtime="20230413 11:43:14.373"/>
+<msg timestamp="20230413 11:51:50.831" level="INFO">${payload} = {'request': 'Where can I park?'}</msg>
+<status status="PASS" starttime="20230413 11:51:50.831" endtime="20230413 11:51:50.831"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${header}</var>
 <arg>Content-Type</arg>
 <arg>application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230413 11:43:14.373" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20230413 11:43:14.373" endtime="20230413 11:43:14.373"/>
+<msg timestamp="20230413 11:51:50.832" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20230413 11:51:50.831" endtime="20230413 11:51:50.832"/>
 </kw>
 <kw name="Post Request" library="RequestsLibrary">
 <var>${response}</var>
@@ -31,55 +31,55 @@
 <arg>headers=${header}</arg>
 <arg>alias=myssion</arg>
 <doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
-<msg timestamp="20230413 11:43:14.373" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
-<msg timestamp="20230413 11:43:14.531" level="INFO">POST Request : url=http://127.0.0.1:5000/api/v1/ask 
+<msg timestamp="20230413 11:51:50.832" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20230413 11:51:50.928" level="INFO">POST Request : url=http://127.0.0.1:5000/api/v1/ask 
  path_url=/api/v1/ask 
  headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '32'} 
  body=b'{"request": "Where can I park?"}' 
  </msg>
-<msg timestamp="20230413 11:43:14.531" level="INFO">POST Response : url=http://127.0.0.1:5000/api/v1/ask 
+<msg timestamp="20230413 11:51:50.928" level="INFO">POST Response : url=http://127.0.0.1:5000/api/v1/ask 
  status=200, reason=OK 
- headers={'Server': 'Werkzeug/2.2.3 Python/3.11.3', 'Date': 'Thu, 13 Apr 2023 10:43:14 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '208', 'Access-Control-Allow-Origin': 'http://localhost:3000', 'Connection': 'close'} 
+ headers={'Server': 'Werkzeug/2.2.3 Python/3.11.3', 'Date': 'Thu, 13 Apr 2023 10:51:50 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '208', 'Access-Control-Allow-Origin': 'http://localhost:3000', 'Connection': 'close'} 
  body={"answer": "Limited street parking is available on Caroline street. Residents have a dedicated car park at 1 caroline st on level B, visitors may park in the lower ground car park. ", "tenantName": "Uniting"} 
  </msg>
-<msg timestamp="20230413 11:43:14.531" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230413 11:43:14.373" endtime="20230413 11:43:14.531"/>
+<msg timestamp="20230413 11:51:50.928" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230413 11:51:50.832" endtime="20230413 11:51:50.928"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230413 11:43:14.531" endtime="20230413 11:43:14.531"/>
+<status status="PASS" starttime="20230413 11:51:50.929" endtime="20230413 11:51:50.930"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230413 11:43:14.531" endtime="20230413 11:43:14.531"/>
+<status status="PASS" starttime="20230413 11:51:50.930" endtime="20230413 11:51:50.931"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230413 11:43:14.531" level="INFO">Argument types are:
+<msg timestamp="20230413 11:51:50.931" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20230413 11:43:14.531" endtime="20230413 11:43:14.531"/>
+<status status="PASS" starttime="20230413 11:51:50.931" endtime="20230413 11:51:50.931"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <var>${res_body}</var>
 <arg>${response.content}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20230413 11:43:14.531" level="INFO">${res_body} = {"answer": "Limited street parking is available on Caroline street. Residents have a dedicated car park at 1 caroline st on level B, visitors may park in the lower ground car park. ", "tenantName": "U...</msg>
-<status status="PASS" starttime="20230413 11:43:14.531" endtime="20230413 11:43:14.531"/>
+<msg timestamp="20230413 11:51:50.932" level="INFO">${res_body} = {"answer": "Limited street parking is available on Caroline street. Residents have a dedicated car park at 1 caroline st on level B, visitors may park in the lower ground car park. ", "tenantName": "U...</msg>
+<status status="PASS" starttime="20230413 11:51:50.932" endtime="20230413 11:51:50.932"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${res_body}</arg>
 <arg>Limited street parking is available on Caroline street. Residents have a dedicated car park at 1 caroline st on level B, visitors may park in the lower ground car park.</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20230413 11:43:14.531" endtime="20230413 11:43:14.531"/>
+<status status="PASS" starttime="20230413 11:51:50.932" endtime="20230413 11:51:50.932"/>
 </kw>
-<status status="PASS" starttime="20230413 11:43:14.373" endtime="20230413 11:43:14.531"/>
+<status status="PASS" starttime="20230413 11:51:50.830" endtime="20230413 11:51:50.933"/>
 </test>
-<status status="PASS" starttime="20230413 11:43:14.261" endtime="20230413 11:43:14.531"/>
+<status status="PASS" starttime="20230413 11:51:50.708" endtime="20230413 11:51:50.934"/>
 </suite>
 <statistics>
 <total>
@@ -92,6 +92,6 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230413 11:43:14.373" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20230413 11:51:50.832" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
 </errors>
 </robot>
